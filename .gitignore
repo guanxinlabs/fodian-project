@@ -1,3 +1,13 @@
 # Obsidian personal workspace state
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
+
+# Obsidian personal and plugin configuration
+.obsidian/core-plugins.json
+.obsidian/community-plugins.json
+.obsidian/webviewer.json
+.obsidian/plugins/
+.claudian/
+
+# Obsidian temporary Bases files
+*.base
