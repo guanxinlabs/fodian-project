@@ -15,27 +15,27 @@ current_study:
   segmentation_file: 01 无量义经/00 无量义经-分段控制表.md
   study_file: 01 无量义经/06 无量义经-经义研习.md
   revision_file: 01 无量义经/99 无量义经-修订记录.md
-  segmentation_status: DRAFT
-  segmentation_version: V1-draft
-  formal_study_status: BLOCKED
+  segmentation_status: LOCKED
+  segmentation_version: V1
+  formal_study_status: READY
   last_locked_unit: null
-  next_unit: null
+  next_unit: WLYJ-P01-001
 
 current_constraints:
-  - 《无量义经》三品全文分段草案已建立，但尚未由维护者确认锁定。
-  - 在分段控制表锁定前，现有06中的旧段号仅作历史研习参考，不再作为新规则下的最终锁定边界。
-  - 后续正式逐段研习从第一段重新开始，并严格继承锁定后的分段控制表。
+  - 《无量义经》三品全文分段 V1 已由维护者确认并锁定，共46个学习单元。
+  - 后续正式逐段研习从 WLYJ-P01-001（德行品第一第1段）重新开始。
+  - 所有段号、单元ID和原文起止必须严格继承 01 无量义经/00 无量义经-分段控制表.md。
   - 固定体例为：原文 → 白话通译 → 字词名相 → 经义研习 → 行持。
   - GitHub main 是唯一正式成果源；换会话、换模型、换工具必须重新执行恢复流程。
+  - 已锁定边界如需调整，必须执行正式变更流程并保留新旧对应关系。
 
 pending:
-  - 维护者审核并确认 01 无量义经/00 无量义经-分段控制表.md 的三品46个学习单元。
-  - 确认后将分段版本升级为V1并把全部单元状态改为已锁定。
-  - 按锁定分段从第一段重新研习并逐段闭环。
+  - 从 WLYJ-P01-001 开始重新逐段研习并逐段闭环。
+  - 逐段确认后按触发规则同步 05/06/03/07/08 等衍生文件。
   - 继续完成01全文规范字专项审校。
   - 继续完成02全文拼音读音专项校核。
   - 后续建立自动一致性校验脚本 scripts/validate_fodian.py。
 
 last_structure_change:
   date: 2026-10-08
-  summary: 已建立《无量义经》三品全文V1-draft分段控制表，共46个学习单元；当前等待维护者确认锁定，正式逐段研习继续保持BLOCKED。
+  summary: 维护者正式确认《无量义经》三品全文V1分段控制表；46个学习单元全部锁定，正式逐段研习状态由BLOCKED切换为READY，下一单元为WLYJ-P01-001。
