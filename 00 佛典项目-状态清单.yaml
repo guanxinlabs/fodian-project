@@ -1,0 +1,40 @@
+schema_version: 1
+rules_manifest_version: V1
+segmentation_rules_version: V1
+runtime_rules_version: V1
+study_template_version: V1
+
+repository:
+  canonical: guanxinlabs/fodian-project
+  branch: main
+
+current_study:
+  sutra: 无量义经
+  chapter: 德行品第一
+  source_file: 01 无量义经/01 无量义经-经文原文.md
+  segmentation_file: 01 无量义经/00 无量义经-分段控制表.md
+  study_file: 01 无量义经/06 无量义经-经义研习.md
+  revision_file: 01 无量义经/99 无量义经-修订记录.md
+  segmentation_status: MISSING
+  formal_study_status: BLOCKED
+  last_locked_unit: null
+  next_unit: null
+
+current_constraints:
+  - 必须先建立并确认《无量义经》分段控制表，至少覆盖完整当前品，优先覆盖三品全文。
+  - 在分段控制表建立并锁定前，现有06中的旧段号仅作历史研习参考，不再作为新规则下的最终锁定边界。
+  - 后续正式逐段研习从第一段重新开始，并严格继承锁定后的分段控制表。
+  - 固定体例为：原文 → 白话通译 → 字词名相 → 经义研习 → 行持。
+  - GitHub main 是唯一正式成果源；换会话、换模型、换工具必须重新执行恢复流程。
+
+pending:
+  - 建立 01 无量义经/00 无量义经-分段控制表.md。
+  - 对《无量义经》三品全文形成分段方案并由维护者确认锁定。
+  - 按锁定分段从第一段重新研习并逐段闭环。
+  - 继续完成01全文规范字专项审校。
+  - 继续完成02全文拼音读音专项校核。
+  - 后续建立自动一致性校验脚本 scripts/validate_fodian.py。
+
+last_structure_change:
+  date: 2026-10-08
+  summary: 新增项目级分段控制、跨工具恢复、规则清单、机器状态清单与运行成本控制机制；段号职责由06单独承担调整为00分段控制表控制边界、06承载研习成果。
