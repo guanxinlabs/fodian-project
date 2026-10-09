@@ -19,8 +19,8 @@ current_study:
   segmentation_status: LOCKED
   segmentation_version: V1
   formal_study_status: READY
-  last_locked_unit: WLYJ-P01-002
-  next_unit: WLYJ-P01-003
+  last_locked_unit: WLYJ-P01-003
+  next_unit: WLYJ-P01-004
 
 current_constraints:
   - 《无量义经》三品全文分段 V1 已由维护者确认并锁定，共46个学习单元。
@@ -41,8 +41,8 @@ current_constraints:
   - 已锁定边界如需调整，必须执行正式变更流程并保留新旧对应关系。
 
 pending:
-  - 从 WLYJ-P01-003（德行品第一第3段）继续按研习模板 V2 逐段研习并闭环。
-  - 现有 06 中第3—5段旧研习内容作为历史参考，不机械批量改写；随逐段重新确认按 V2 收口。
+  - 从 WLYJ-P01-004（德行品第一第4段）继续按研习模板 V2 逐段研习并闭环。
+  - 现有 06 中第4—5段旧研习内容作为历史参考，不机械批量改写；随逐段重新确认按 V2 收口。
   - 每段确认保存后保持02/05/06单元ID、段号、原文边界一致，并自动推进last_locked_unit与next_unit。
   - 继续完成01全文规范字专项审校。
   - 继续完成02全文拼音读音专项校核；未核读音继续标记待核，不猜读。
@@ -50,4 +50,4 @@ pending:
 
 last_structure_change:
   date: 2026-10-09
-  summary: WLYJ-P01-002 已按研习模板 V2 正式收口；05 白话通译完整保留全部菩萨名号，06 补齐独立拼音读本并按六栏结构收口。未改变母本、读音、分段或编号，下一学习单元推进至 WLYJ-P01-003。
+  summary: WLYJ-P01-003 已按研习模板 V2 正式收口；05 同步第三段完整白话，06 补齐独立拼音读本并按六栏结构重做第三段研习。未改变母本、读音、分段或编号，下一学习单元推进至 WLYJ-P01-004。
