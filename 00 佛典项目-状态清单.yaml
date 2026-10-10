@@ -19,8 +19,8 @@ current_study:
   segmentation_status: LOCKED
   segmentation_version: V1
   formal_study_status: READY
-  last_locked_unit: WLYJ-P01-008
-  next_unit: WLYJ-P01-009
+  last_locked_unit: WLYJ-P01-009
+  next_unit: WLYJ-P01-010
 
 current_constraints:
   - 《无量义经》三品全文分段 V1 已由维护者确认并锁定，共46个学习单元。
@@ -42,7 +42,7 @@ current_constraints:
   - 已锁定边界如需调整，必须执行正式变更流程并保留新旧对应关系。
 
 pending:
-  - 从 WLYJ-P01-009（德行品第一第9段）继续按研习模板 V2 逐段研习并闭环，字词名相继续采用“本经原句 → 本句白话 → 解释”的新顺序。
+  - 从 WLYJ-P01-010（德行品第一第10段）继续按研习模板 V2 逐段研习并闭环，字词名相继续采用“本经原句 → 本句白话 → 解释”的新顺序。
   - 每段确认保存后保持02/05/06单元ID、段号、原文边界一致，并自动推进last_locked_unit与next_unit。
   - 继续完成01全文规范字专项审校。
   - 继续完成02全文拼音读音专项校核；未核读音继续标记待核，不猜读。
@@ -50,4 +50,4 @@ pending:
 
 last_structure_change:
   date: 2026-10-10
-  summary: WLYJ-P01-008 已按研习模板 V2 正式收口；05 同步第八段完整白话，06 保存第八段赞佛偈研习，07 补充“无相”经内追踪。未改变母本、读音、分段或编号，下一学习单元推进至 WLYJ-P01-009。
+  summary: WLYJ-P01-009 已按研习模板 V2 正式收口；05 同步第九段完整白话，06 保存第九段礼敬佛身与法轮教化功德研习。未改变母本、读音、分段或编号，下一学习单元推进至 WLYJ-P01-010。
