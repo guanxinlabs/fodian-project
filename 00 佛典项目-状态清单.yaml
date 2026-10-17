@@ -19,8 +19,8 @@ current_study:
   segmentation_status: LOCKED
   segmentation_version: V1
   formal_study_status: READY
-  last_locked_unit: WLYJ-P02-003
-  next_unit: WLYJ-P02-004
+  last_locked_unit: WLYJ-P02-004
+  next_unit: WLYJ-P02-005
 
 current_constraints:
   - 《无量义经》三品全文分段 V1 已由维护者确认并锁定，共46个学习单元。
@@ -42,7 +42,7 @@ current_constraints:
   - 已锁定边界如需调整，必须执行正式变更流程并保留新旧对应关系。
 
 pending:
-  - 德行品第一 WLYJ-P01-001 至 WLYJ-P01-010 已全部按 V2 正式闭环；说法品第二 WLYJ-P02-001 至 WLYJ-P02-003 已正式闭环，下一步从 WLYJ-P02-004（问法门名、义与修行）继续逐段研习。
+  - 德行品第一 WLYJ-P01-001 至 WLYJ-P01-010 已全部按 V2 正式闭环；说法品第二 WLYJ-P02-001 至 WLYJ-P02-004 已正式闭环，下一步从 WLYJ-P02-005（观察诸法性相空寂、生悲心、深入四相）继续逐段研习。
   - 每段确认保存后保持02/05/06单元ID、段号、原文边界一致，并自动推进last_locked_unit与next_unit。
   - 继续完成01全文规范字专项审校。
   - 继续完成02全文拼音读音专项校核；未核读音继续标记待核，不猜读。
@@ -50,4 +50,4 @@ pending:
 
 last_structure_change:
   date: 2026-10-17
-  summary: WLYJ-P02-003 已按研习模板 V2 正式收口；05 同步说法品第二第三段完整白话，06 保存“佛答有一法门”研习。未改变母本、读音、分段或编号，下一学习单元推进至 WLYJ-P02-004。
+  summary: WLYJ-P02-004 已按研习模板 V2 正式收口；05 同步说法品第二第四段完整白话，06 保存“问法门名、义与修行”研习。未改变母本、读音、分段或编号，下一学习单元推进至 WLYJ-P02-005。
