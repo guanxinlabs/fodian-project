@@ -1,0 +1,53 @@
+name: Fix WLYJ P02 Closure Status
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Fix closure wording and stale status
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 <<'PY'
+          from pathlib import Path
+          import re
+
+          study = Path('01 无量义经/06 无量义经-经义研习.md')
+          s = study.read_text(encoding='utf-8')
+          s = s.replace('说法品第二十六个锁定学习单元至此全部完成。', '说法品第二的十六个锁定学习单元至此全部完成。')
+          study.write_text(s, encoding='utf-8')
+
+          state = Path('00 佛典项目-状态清单.yaml')
+          y = state.read_text(encoding='utf-8')
+          y = y.replace('说法品第二十六个学习单元全部完成', '说法品第二的十六个学习单元全部完成')
+          state.write_text(y, encoding='utf-8')
+
+          current = Path('00 佛典项目当前状态与共识.md')
+          c = current.read_text(encoding='utf-8')
+          c = re.sub(r'(?m)^- 已确认完成：德行品第一 `WLYJ-P01-001` 至 `WLYJ-P01-010` 全部10段；说法品第二 .*$', '- 已确认完成：德行品第一 `WLYJ-P01-001` 至 `WLYJ-P01-010` 全部10段；说法品第二 `WLYJ-P02-001` 至 `WLYJ-P02-016` 全部16段。', c)
+          c = re.sub(r'(?m)^- 下一学习单元：`WLYJ-P02-015`.*$', '- 下一学习单元：`WLYJ-P03-001`（十功德品第三第1段｜赞经并问经从何来、去何至、住何所）。', c)
+          c = re.sub(r'(?m)^- `05 白话通译`：.*$', '- `05 白话通译`：德行品第一十段及说法品第二十六段已经全部同步。', c)
+          c = re.sub(r'(?m)^- `06 经义研习`：.*$', '- `06 经义研习`：德行品第一十段及说法品第二十六段已经按 V2 全部正式收口；说法品第二以第16段“大众闻经所得利益”完成闭环。', c)
+          c = re.sub(r'(?m)^- `07 关键词索引`：.*$', '- `07 关键词索引`：第15、16段本轮未形成必须新增的独立索引事项，相关瑞相、闻经所得等线索由经义研习承接。', c)
+          c = re.sub(r'(?m)^- `99 修订记录`：.*$', '- `99 修订记录`：第15、16段本轮未产生新的字形、异文、断句或读音核定事项，无新增。', c)
+          c = c.replace('说法品第二十六段已经全部同步', '说法品第二的十六段已经全部同步')
+          c = c.replace('说法品第二十六段已经按 V2 全部正式收口', '说法品第二的十六段已经按 V2 全部正式收口')
+          current.write_text(c, encoding='utf-8')
+          PY
+
+          git rm -f .github/workflows/fix-wlyj-p02-closure.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add '01 无量义经/06 无量义经-经义研习.md' '00 佛典项目-状态清单.yaml' '00 佛典项目当前状态与共识.md'
+          git commit -m '佛典：校正说法品闭环状态文字'
+          git push origin HEAD:main
