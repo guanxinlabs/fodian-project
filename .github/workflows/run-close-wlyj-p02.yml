@@ -1,0 +1,73 @@
+name: Run WLYJ P02 Closure
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  close:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Apply confirmed closure
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 <<'PY'
+          from pathlib import Path
+          import re
+
+          payload_path = Path('.github/workflows/close-wlyj-p02.yml')
+          payload = payload_path.read_text(encoding='utf-8')
+
+          def block(tag):
+              m = re.search(r"<<'" + re.escape(tag) + r"'\n(.*?)\n" + re.escape(tag), payload, re.S)
+              if not m:
+                  raise RuntimeError(f'missing payload {tag}')
+              return m.group(1)
+
+          trans = Path('01 无量义经/05 无量义经-白话通译.md')
+          study = Path('01 无量义经/06 无量义经-经义研习.md')
+          state = Path('00 佛典项目-状态清单.yaml')
+          current = Path('00 佛典项目当前状态与共识.md')
+
+          t = trans.read_text(encoding='utf-8')
+          if '### 第十六段｜大众闻经所得利益' not in t:
+              t = t.rstrip() + '\n' + block('EOF_TRANS') + '\n'
+              trans.write_text(t, encoding='utf-8')
+
+          s = study.read_text(encoding='utf-8')
+          if 'WLYJ-P02-015' not in s:
+              s = s.rstrip() + '\n' + block('EOF_15') + '\n'
+          if 'WLYJ-P02-016' not in s:
+              s = s.rstrip() + '\n' + block('EOF_16') + '\n'
+          study.write_text(s, encoding='utf-8')
+
+          y = state.read_text(encoding='utf-8')
+          y = re.sub(r'(?m)^  chapter: .+$', '  chapter: 十功德品第三', y)
+          y = re.sub(r'(?m)^  last_locked_unit: .+$', '  last_locked_unit: WLYJ-P02-016', y)
+          y = re.sub(r'(?m)^  next_unit: .+$', '  next_unit: WLYJ-P03-001', y)
+          y = re.sub(r'(?m)^  - 德行品第一 WLYJ-P01-001 至 WLYJ-P01-010 已全部按 V2 正式闭环；说法品第二 .+$', '  - 德行品第一 WLYJ-P01-001 至 WLYJ-P01-010 已全部按 V2 正式闭环；说法品第二 WLYJ-P02-001 至 WLYJ-P02-016 已正式闭环，下一步从 WLYJ-P03-001（赞经并问经从何来、去何至、住何所）继续逐段研习。', y)
+          if 'last_structure_change:' in y:
+              y = y.split('last_structure_change:')[0].rstrip() + '\n\nlast_structure_change:\n  date: 2026-10-23\n  summary: 已补齐此前中断的 WLYJ-P02-015 正式闭环，并正式闭环 WLYJ-P02-016。05 已同步至第十六段白话通译，06 已保存第十五、十六段完整 V2 研习成果。01 母本与 02 拼音读本对应原文已存在且无需修改；03/07/08/99 未触发新增条件。说法品第二十六个学习单元全部完成，下一学习单元推进至 WLYJ-P03-001。\n'
+          state.write_text(y, encoding='utf-8')
+
+          c = current.read_text(encoding='utf-8')
+          c = c.replace('`WLYJ-P02-001` 至 `WLYJ-P02-014` 已按 V2 正式收口，说法品第二继续逐段研习。','`WLYJ-P02-001` 至 `WLYJ-P02-016` 已按 V2 正式收口，说法品第二全部完成。')
+          c = c.replace('当前已完成 `WLYJ-P02-014`（说法品第二第14段｜再次总结经尊与劝修）；下一学习单元为 `WLYJ-P02-015`（说法品第二第15段｜说法后瑞相与十方供养）。所有段号、单元ID和原文起止严格继承 `00 无量义经-分段控制表.md`。','当前已完成 `WLYJ-P02-016`（说法品第二第16段｜大众闻经所得利益），说法品第二16个学习单元全部完成；下一学习单元为 `WLYJ-P03-001`（十功德品第三第1段｜赞经并问经从何来、去何至、住何所）。所有段号、单元ID和原文起止严格继承 `00 无量义经-分段控制表.md`。')
+          c = re.sub(r'(?m)^- 已确认完成：说法品第二.*$', '- 已确认完成：说法品第二 `WLYJ-P02-001` 至 `WLYJ-P02-016`，16 个学习单元全部正式闭环。', c)
+          c = re.sub(r'(?m)^- 当前学习单元：.*$', '- 当前学习单元：`WLYJ-P03-001`（十功德品第三第1段｜赞经并问经从何来、去何至、住何所）。', c)
+          current.write_text(c, encoding='utf-8')
+          PY
+
+          git rm -f .github/workflows/close-wlyj-p02.yml .github/workflows/run-close-wlyj-p02.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add '01 无量义经/05 无量义经-白话通译.md' '01 无量义经/06 无量义经-经义研习.md' '00 佛典项目-状态清单.yaml' '00 佛典项目当前状态与共识.md'
+          git commit -m '佛典：闭环说法品第15至16段'
+          git push origin HEAD:main
