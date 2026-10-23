@@ -19,8 +19,8 @@ current_study:
   segmentation_status: LOCKED
   segmentation_version: V1
   formal_study_status: READY
-  last_locked_unit: WLYJ-P02-016
-  next_unit: WLYJ-P03-001
+  last_locked_unit: WLYJ-P03-001
+  next_unit: WLYJ-P03-002
 
 current_constraints:
   - 《无量义经》三品全文分段 V1 已由维护者确认并锁定，共46个学习单元。
@@ -44,7 +44,7 @@ current_constraints:
   - 已锁定边界如需调整，必须执行正式变更流程并保留新旧对应关系。
 
 pending:
-  - 德行品第一 WLYJ-P01-001 至 WLYJ-P01-010 已全部按 V2 正式闭环；说法品第二 WLYJ-P02-001 至 WLYJ-P02-016 已正式闭环，下一步从 WLYJ-P03-001（赞经并问经从何来、去何至、住何所）继续逐段研习。
+  - 德行品第一 WLYJ-P01-001 至 WLYJ-P01-010 已全部按 V2 正式闭环；说法品第二 WLYJ-P02-001 至 WLYJ-P02-016 已正式闭环；十功德品第三 WLYJ-P03-001 已正式闭环，下一步从 WLYJ-P03-002（佛答经之来、去、住并引出十功德）继续逐段研习。
   - 每段确认保存后保持02/05/06单元ID、段号、原文边界一致，并自动推进last_locked_unit与next_unit。
   - 继续完成01全文规范字专项审校。
   - 继续完成02全文拼音读音专项校核；未核读音继续标记待核，不猜读。
@@ -52,4 +52,4 @@ pending:
 
 last_structure_change:
   date: 2026-10-23
-  summary: 已补齐此前中断的 WLYJ-P02-015 正式闭环，并正式闭环 WLYJ-P02-016。05 已同步至第十六段白话通译，06 已保存第十五、十六段完整 V2 研习成果。01 母本与 02 拼音读本对应原文已存在且无需修改；03/07/08/99 未触发新增条件。说法品第二的十六个学习单元全部完成，下一学习单元推进至 WLYJ-P03-001。
+  summary: 已正式闭环 WLYJ-P03-001（十功德品第三第1段｜赞经并问经从何来、去何至、住何所）。05 已同步本段白话通译，06 已保存本段完整 V2 研习成果。01 母本与 02 拼音读本对应原文已存在且无需修改；03/07/08/99 未触发新增条件。下一学习单元推进至 WLYJ-P03-002。
