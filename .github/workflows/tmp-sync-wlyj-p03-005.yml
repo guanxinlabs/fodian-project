@@ -34,7 +34,7 @@ jobs:
           for name in files:
               p = Path(name)
               text = p.read_text(encoding='utf-8')
-              text = '\n'.join(line.rstrip(' \t') for line in text.splitlines()) + '\n'
+              text = '\n'.join(line.rstrip(' \t') for line in text.splitlines()).rstrip('\n') + '\n'
               p.write_text(text, encoding='utf-8')
           PY
       - name: Stage and validate generated files
