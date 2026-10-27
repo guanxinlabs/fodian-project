@@ -45,3 +45,5 @@ jobs:
           git diff --cached --check
           git commit -m "tmp: close WLYJ-P03-005"
           git push origin HEAD:tmp-sync-wlyj-p03-005
+
+# trigger
