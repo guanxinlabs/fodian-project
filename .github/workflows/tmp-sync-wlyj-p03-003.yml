@@ -1,0 +1,33 @@
+name: tmp-sync-wlyj-p03-003
+
+on:
+  push:
+    branches:
+      - tmp-sync-wlyj-p03-003
+
+permissions:
+  contents: write
+
+jobs:
+  sync-unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tmp-sync-wlyj-p03-003
+          fetch-depth: 0
+      - name: Apply confirmed unit
+        run: python scripts/tmp_sync_wlyj_p03_003.py
+      - name: Validate diff
+        run: |
+          git diff --check
+          git status --short
+      - name: Commit generated files
+        run: |
+          git config user.name 'Guanxin Lab | 观心研习社'
+          git config user.email 'guancheng4968@gmail.com'
+          git add -- '01 无量义经/05 无量义经-白话通译.md' '01 无量义经/06 无量义经-经义研习.md' '00 佛典项目-状态清单.yaml' '00 佛典项目当前状态与共识.md'
+          git diff --cached --check
+          git diff --cached --name-only
+          git commit -m 'tmp: close WLYJ-P03-003'
+          git push origin HEAD:tmp-sync-wlyj-p03-003
