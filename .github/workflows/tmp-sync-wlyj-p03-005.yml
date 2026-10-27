@@ -37,9 +37,10 @@ jobs:
               text = '\n'.join(line.rstrip(' \t') for line in text.splitlines()) + '\n'
               p.write_text(text, encoding='utf-8')
           PY
-      - name: Validate diff
+      - name: Stage and validate exact files
         run: |
-          git diff --check
+          git add -- "00 佛典项目-状态清单.yaml" "00 佛典项目当前状态与共识.md" "01 无量义经/03 无量义经-经文行法.md" "01 无量义经/05 无量义经-白话通译.md" "01 无量义经/06 无量义经-经义研习.md" "01 无量义经/07 无量义经-关键词索引.md"
+          git diff --cached --check
           python3 - <<'PY'
           import subprocess
           expected = {
@@ -50,16 +51,14 @@ jobs:
               '01 无量义经/06 无量义经-经义研习.md',
               '01 无量义经/07 无量义经-关键词索引.md',
           }
-          actual = set(subprocess.check_output(['git','diff','--name-only','-z']).decode().split('\0'))
+          actual = set(subprocess.check_output(['git','diff','--cached','--name-only','-z']).decode().split('\0'))
           actual.discard('')
           if actual != expected:
-              raise SystemExit(f'changed files mismatch: {actual}')
+              raise SystemExit(f'staged files mismatch: {actual}')
           PY
       - name: Commit generated files
         run: |
           git config user.name "Guanxin Lab | 观心研习社"
           git config user.email "guancheng4968@gmail.com"
-          git add -- "00 佛典项目-状态清单.yaml" "00 佛典项目当前状态与共识.md" "01 无量义经/03 无量义经-经文行法.md" "01 无量义经/05 无量义经-白话通译.md" "01 无量义经/06 无量义经-经义研习.md" "01 无量义经/07 无量义经-关键词索引.md"
-          git diff --cached --check
           git commit -m "tmp: close WLYJ-P03-005"
           git push origin HEAD:tmp-sync-wlyj-p03-005
