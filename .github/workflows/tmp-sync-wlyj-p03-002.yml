@@ -16,6 +16,15 @@ jobs:
         with:
           ref: tmp-sync-wlyj-p03-002
           fetch-depth: 0
+      - name: Fix temporary matcher
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/tmp_sync_wlyj_p03_002.py')
+          s = p.read_text(encoding='utf-8')
+          s = s.replace("'- 当前已完成 `WLYJ-P03-001`", "'当前已完成 `WLYJ-P03-001`")
+          p.write_text(s, encoding='utf-8')
+          PY
       - name: Apply confirmed unit
         run: python scripts/tmp_sync_wlyj_p03_002.py
       - name: Validate diff
