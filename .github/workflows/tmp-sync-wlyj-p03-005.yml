@@ -19,6 +19,24 @@ jobs:
       - name: Apply confirmed unit
         run: |
           python3 scripts/tmp_sync_wlyj_p03_005.py
+      - name: Normalize generated markdown
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          files = [
+              '00 佛典项目-状态清单.yaml',
+              '00 佛典项目当前状态与共识.md',
+              '01 无量义经/03 无量义经-经文行法.md',
+              '01 无量义经/05 无量义经-白话通译.md',
+              '01 无量义经/06 无量义经-经义研习.md',
+              '01 无量义经/07 无量义经-关键词索引.md',
+          ]
+          for name in files:
+              p = Path(name)
+              text = p.read_text(encoding='utf-8')
+              text = '\n'.join(line.rstrip(' \t') for line in text.splitlines()) + '\n'
+              p.write_text(text, encoding='utf-8')
+          PY
       - name: Validate diff
         run: |
           git diff --check
@@ -45,5 +63,3 @@ jobs:
           git diff --cached --check
           git commit -m "tmp: close WLYJ-P03-005"
           git push origin HEAD:tmp-sync-wlyj-p03-005
-
-# trigger
