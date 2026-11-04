@@ -19,8 +19,8 @@ current_study:
   segmentation_status: LOCKED
   segmentation_version: V1
   formal_study_status: READY
-  last_locked_unit: WLYJ-P03-015
-  next_unit: WLYJ-P03-016
+  last_locked_unit: WLYJ-P03-016
+  next_unit: WLYJ-P03-017
 
 current_constraints:
   - 《无量义经》三品全文分段 V1 已由维护者确认并锁定，共46个学习单元。
@@ -44,7 +44,7 @@ current_constraints:
   - 已锁定边界如需调整，必须执行正式变更流程并保留新旧对应关系。
 
 pending:
-  - 德行品第一 WLYJ-P01-001 至 WLYJ-P01-010 已全部按 V2 正式闭环；说法品第二 WLYJ-P02-001 至 WLYJ-P02-016 已正式闭环；十功德品第三 WLYJ-P03-001 至 WLYJ-P03-015 已正式闭环，下一步从 WLYJ-P03-016（瑞相、供养与十方响应）继续逐段研习。
+  - 德行品第一 WLYJ-P01-001 至 WLYJ-P01-010 已全部按 V2 正式闭环；说法品第二 WLYJ-P02-001 至 WLYJ-P02-016 已正式闭环；十功德品第三 WLYJ-P03-001 至 WLYJ-P03-016 已正式闭环，下一步从 WLYJ-P03-017（佛嘱敬经、修行、广化、流布守护）继续逐段研习。
   - 每段确认保存后保持02/05/06单元ID、段号、原文边界一致，并自动推进last_locked_unit与next_unit。
   - 继续完成01全文规范字专项审校。
   - 继续完成02全文拼音读音专项校核；未核读音继续标记待核，不猜读。
@@ -52,4 +52,4 @@ pending:
 
 last_structure_change:
   date: 2026-10-23
-  summary: 已正式闭环 WLYJ-P03-015。第15段为八万菩萨赞经、得法利、谢佛，05 已保存原文和白话、06 已保存 V2 六栏目，07 补“无量义三昧”和“法利”经内索引；本段未独立新增行法，03 不变，01/02/08/99 未触发修改。下一单元为 WLYJ-P03-016。
+  summary: 已正式闭环 WLYJ-P03-016。05 已同步第16段原文与完整白话，06 已保存 V2 六栏目研习，07 新增六种震动、十方经内索引；本段属于瑞相、供养及十方响应叙事，03 未新增行法；01/02 已一致，08/99 无新增触发。下一单元 WLYJ-P03-017。
