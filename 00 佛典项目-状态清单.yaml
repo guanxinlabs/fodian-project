@@ -18,9 +18,9 @@ current_study:
   revision_file: 01 无量义经/99 无量义经-修订记录.md
   segmentation_status: LOCKED
   segmentation_version: V1
-  formal_study_status: READY
-  last_locked_unit: WLYJ-P03-019
-  next_unit: WLYJ-P03-020
+  formal_study_status: LOCKED
+  last_locked_unit: WLYJ-P03-020
+  next_unit: null
 
 current_constraints:
   - 《无量义经》三品全文分段 V1 已由维护者确认并锁定，共46个学习单元。
@@ -44,7 +44,7 @@ current_constraints:
   - 已锁定边界如需调整，必须执行正式变更流程并保留新旧对应关系。
 
 pending:
-  - 德行品第一 WLYJ-P01-001 至 WLYJ-P01-010 已全部按 V2 正式闭环；说法品第二 WLYJ-P02-001 至 WLYJ-P02-016 已正式闭环；十功德品第三 WLYJ-P03-001 至 WLYJ-P03-019 已正式闭环，下一步从 WLYJ-P03-020（大会欢喜、礼佛、受持而去）继续逐段研习。
+  - 德行品第一 WLYJ-P01-001 至 WLYJ-P01-010 已全部按 V2 正式闭环；说法品第二 WLYJ-P02-001 至 WLYJ-P02-016 已正式闭环；十功德品第三 WLYJ-P03-001 至 WLYJ-P03-020 全部正式闭环；《无量义经》三品共46个已锁定学习单元首轮逐段研习完成，当前无下一单元。
   - 每段确认保存后保持02/05/06单元ID、段号、原文边界一致，并自动推进last_locked_unit与next_unit。
   - 继续完成01全文规范字专项审校。
   - 继续完成02全文拼音读音专项校核；未核读音继续标记待核，不猜读。
@@ -52,4 +52,4 @@ pending:
 
 last_structure_change:
   date: 2026-10-23
-  summary: 已正式闭环 WLYJ-P03-019。第19段佛赞八万菩萨为佛子、良福田、大良导、大依止处、大施主，常以法利广施一切；05 已同步原文与白话，06 已保存 V2 六栏目，07 已补佛子及福田、良导、依止处与法施索引。本段属于佛对菩萨慈悲利生的赞叹，03 未新增行法；01/02 一致，08/99 无新增触发。下一单元 WLYJ-P03-020。
+  summary: 《无量义经》V1 锁定46单元首轮逐段研习已完成，最后单元 WLYJ-P03-020 已正式闭环。05 保存原文与白话，06 保存 V2 六栏目；本段属法会欢喜、礼佛、受持而去叙事，03 无新增行法，07 既有受持索引足够，01/02 已核对无变化，08/99 无触发；next_unit 已按全经结束规则置空。规范字专项审校、拼音专项核读与全经一致性审计仍待后续独立执行。
