@@ -74,5 +74,10 @@ mother_text_preparation:
   source_file: 02 妙法莲华经/01 妙法莲华经-经文原文.md
   revision_file: 02 妙法莲华经/99 妙法莲华经-修订记录.md
   mother_text_commit: 9dd987b2bd27d778403526ec422ee50fa0874860
-  pinyin_status: pending_rebuild
+  pinyin_status: first_pass_inherited_readings_followup_pending
+  pinyin_file: 02 妙法莲华经/02 妙法莲华经-拼音阅读.md
+  pinyin_commit: c8968088857a073cfcc365d5bd41273d6a0f1a72
+  pinyin_inherited_annotations: 416
+  pinyin_pending_markers: 118
+  pinyin_source_equality_verified: true
   note: 第一轮母本已收口；未核定特殊字保留底本字形，最终定本专项待办。正式研习状态不切换。
