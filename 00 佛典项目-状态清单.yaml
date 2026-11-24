@@ -53,3 +53,22 @@ pending:
 last_structure_change:
   date: 2026-10-23
   summary: 《无量义经》V1 锁定46单元首轮逐段研习已完成，最后单元 WLYJ-P03-020 已正式闭环。05 保存原文与白话，06 保存 V2 六栏目；本段属法会欢喜、礼佛、受持而去叙事，03 无新增行法，07 既有受持索引足够，01/02 已核对无变化，08/99 无触发；next_unit 已按全经结束规则置空。规范字专项审校、拼音专项核读与全经一致性审计仍待后续独立执行。
+
+mother_text_preparation:
+  sutra: 妙法莲华经
+  directory: 02 妙法莲华经
+  source_id: T09n0262
+  source_version: CBETA 2026.R2
+  source_commit: dbdea41071e1e260ad84b72faefd4587333cf76d
+  source_portal: https://cbetaonline.dila.edu.tw/zh-tw/
+  approved_date: 2026-11-24
+  source_structure_verified: true
+  volumes: 7
+  chapters: 28
+  extracted_han_count: 69284
+  comparison_status: preliminary
+  normative_character_audit: pending
+  revision_record_status: pending
+  mother_text_status: not_established
+  formal_study_status: not_started
+  note: 建设方案已确认；现有原文和拼音文件暂不覆盖。未通过专项审校，不切换正式母本或当前研习状态。
