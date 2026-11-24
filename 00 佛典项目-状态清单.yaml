@@ -66,9 +66,13 @@ mother_text_preparation:
   volumes: 7
   chapters: 28
   extracted_han_count: 69284
-  comparison_status: preliminary
-  normative_character_audit: pending
-  revision_record_status: pending
-  mother_text_status: not_established
+  comparison_status: key_variants_checked_followup_pending
+  normative_character_audit: first_pass_completed_followup_pending
+  revision_record_status: established
+  mother_text_status: first_pass_established
   formal_study_status: not_started
-  note: 建设方案已确认；现有原文和拼音文件暂不覆盖。未通过专项审校，不切换正式母本或当前研习状态。
+  source_file: 02 妙法莲华经/01 妙法莲华经-经文原文.md
+  revision_file: 02 妙法莲华经/99 妙法莲华经-修订记录.md
+  mother_text_commit: 9dd987b2bd27d778403526ec422ee50fa0874860
+  pinyin_status: pending_rebuild
+  note: 第一轮母本已收口；未核定特殊字保留底本字形，最终定本专项待办。正式研习状态不切换。
