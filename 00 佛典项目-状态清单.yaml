@@ -80,4 +80,15 @@ mother_text_preparation:
   pinyin_inherited_annotations: 416
   pinyin_pending_markers: 118
   pinyin_source_equality_verified: true
-  note: 第一轮母本已收口；未核定特殊字保留底本字形，最终定本专项待办。正式研习状态不切换。
+  segmentation_file: 02 妙法莲华经/00 妙法莲华经-分段控制表.md
+  segmentation_version: V1
+  segmentation_status: LOCKED
+  locked_chapter: 序品第一
+  locked_units: 26
+  segmentation_commit: 12fda5375172ed4baf6315b81b5a010557d3d9ea
+  last_completed_unit: null
+  next_unit: MFH-P01-001
+  next_unit_start: "如是我闻："
+  next_unit_end: 罗睺罗母耶输陀罗比丘尼，亦与眷属俱。
+  next_unit_han_count: 190
+  note: 序品分段已锁定；待首段读音核对及正式研习启动。未确认研习内容不写入06；现有current_study记录保留无量义经已完成状态。
