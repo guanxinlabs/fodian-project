@@ -19,8 +19,8 @@ current_study:
   segmentation_status: LOCKED
   segmentation_version: V1
   formal_study_status: READY
-  last_locked_unit: MFH-P01-002
-  next_unit: MFH-P01-003
+  last_locked_unit: MFH-P01-003
+  next_unit: MFH-P01-004
 
 completed_study:
   - sutra: 无量义经
@@ -97,10 +97,10 @@ mother_text_preparation:
   locked_chapter: 序品第一
   locked_units: 26
   segmentation_commit: 12fda5375172ed4baf6315b81b5a010557d3d9ea
-  last_completed_unit: MFH-P01-002
-  next_unit: MFH-P01-003
-  next_unit_start: 尔时释提桓因
-  next_unit_end: 各礼佛足，退坐一面。
-  next_unit_han_count: 324
-  study_commit: ad06fc40467bb11fd37708fbacd461728243a584
-  note: 序品第1至2段已闭环；前三段拼音专项补校完成16处，佉罗骞驮保留待核。后续随段核查。
+  last_completed_unit: MFH-P01-003
+  next_unit: MFH-P01-004
+  next_unit_start: 尔时世尊，四众围绕
+  next_unit_end: 欢喜合掌，一心观佛。
+  next_unit_han_count: 159
+  study_commit: 552f888311e26ffa42a803bad638e06660e720f1
+  note: 序品第1至3段已闭环；前三段拼音专项补校完成16处，佉罗骞驮保留待核。后续随段核查。
