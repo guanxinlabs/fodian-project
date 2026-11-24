@@ -19,8 +19,8 @@ current_study:
   segmentation_status: LOCKED
   segmentation_version: V1
   formal_study_status: READY
-  last_locked_unit: MFH-P01-001
-  next_unit: MFH-P01-002
+  last_locked_unit: MFH-P01-002
+  next_unit: MFH-P01-003
 
 completed_study:
   - sutra: 无量义经
@@ -94,10 +94,10 @@ mother_text_preparation:
   locked_chapter: 序品第一
   locked_units: 26
   segmentation_commit: 12fda5375172ed4baf6315b81b5a010557d3d9ea
-  last_completed_unit: MFH-P01-001
-  next_unit: MFH-P01-002
-  next_unit_start: 菩萨摩诃萨八万人，皆于
-  next_unit_end: 如是等菩萨摩诃萨八万人俱。
-  next_unit_han_count: 190
-  study_commit: 3dbe19276b488306ef7af6a25ced62223c28918d
-  note: 序品第1段已闭环；02保留待核读音，后续随研习核查。
+  last_completed_unit: MFH-P01-002
+  next_unit: MFH-P01-003
+  next_unit_start: 尔时释提桓因
+  next_unit_end: 各礼佛足，退坐一面。
+  next_unit_han_count: 324
+  study_commit: ad06fc40467bb11fd37708fbacd461728243a584
+  note: 序品第1至2段已闭环；02保留待核读音，后续随研习核查。
