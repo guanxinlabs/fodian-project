@@ -19,8 +19,8 @@ current_study:
   segmentation_status: LOCKED
   segmentation_version: V1
   formal_study_status: READY
-  last_locked_unit: MFH-P01-003
-  next_unit: MFH-P01-004
+  last_locked_unit: MFH-P01-004
+  next_unit: MFH-P01-005
 
 completed_study:
   - sutra: 无量义经
@@ -84,12 +84,12 @@ mother_text_preparation:
   mother_text_commit: 9dd987b2bd27d778403526ec422ee50fa0874860
   pinyin_status: first_pass_inherited_readings_followup_pending
   pinyin_file: 02 妙法莲华经/02 妙法莲华经-拼音阅读.md
-  pinyin_commit: 72798a3fe6651c872dfecb51f81173e3b53f3c32
+  pinyin_commit: 833fb4d91132ef808d0d21bc81d8b61b3a694afd
   pinyin_inherited_annotations: 416
-  pinyin_pending_markers: 102
-  pinyin_reviewed_units: MFH-P01-001 through MFH-P01-003
+  pinyin_pending_markers: 100
+  pinyin_reviewed_units: MFH-P01-001 through MFH-P01-004
   pinyin_review_remaining: 佉罗骞驮
-  pinyin_review_record_commit: 9705f08a4286d4b469fbd5fc59f049fd2fb0e6cf
+  pinyin_review_record_commit: 15dbbd062b9009183fcbbf7f4e736fc2df8a25a7
   pinyin_source_equality_verified: true
   segmentation_file: 02 妙法莲华经/00 妙法莲华经-分段控制表.md
   segmentation_version: V1
@@ -97,10 +97,10 @@ mother_text_preparation:
   locked_chapter: 序品第一
   locked_units: 26
   segmentation_commit: 12fda5375172ed4baf6315b81b5a010557d3d9ea
-  last_completed_unit: MFH-P01-003
-  next_unit: MFH-P01-004
-  next_unit_start: 尔时世尊，四众围绕
-  next_unit_end: 欢喜合掌，一心观佛。
-  next_unit_han_count: 159
-  study_commit: 552f888311e26ffa42a803bad638e06660e720f1
-  note: 序品第1至3段已闭环；前三段拼音专项补校完成16处，佉罗骞驮保留待核。后续随段核查。
+  last_completed_unit: MFH-P01-004
+  next_unit: MFH-P01-005
+  next_unit_start: 尔时佛放眉间白毫相光
+  next_unit_end: 以佛舍利起七宝塔。
+  next_unit_han_count: 132
+  study_commit: 833fb4d91132ef808d0d21bc81d8b61b3a694afd
+  note: 序品第1至4段已闭环；第4段拼音补校完成，前三段佉罗骞驮保留待核。后续随段核查。
